@@ -24,30 +24,18 @@
 
 
 let comparedArray3 = [5, 15, 10, 98, 65];
-let comparedArray4 = [5, 15, 10, 98, 65, 4];
+let comparedArray4 = [5, 15, 10, 98, 65];
 
-function compareValues(val1, val2) {
-  if(val1 === val2) {
-    return true;
-  } else {
-    return false;
-  }
- }
+// function compareValues(val1, val2) {
+//   return val1 === val2;
+// }
 
 function compare(array1, array2) {
-  let valuesArray = [];
   if(array1.length != array2.length) {
     console.log("Arrays don't match!");
     return;
   }
-  for(let i = 0; i < array1.length; i++) {
-    valuesArray.push(compareValues(array1[i], array2[i]));
+  (array1.every((item, index) => item === array2[index])) ? console.log("Arrays are even!") : console.log("Arrays are not even!");
   }
-  if(valuesArray.some(elem => elem === false)) {
-    console.log("Arrays are not even!");
-  } else {
-    console.log("Arrays are even!");
-  }  
-}
 
 compare(comparedArray3, comparedArray4);

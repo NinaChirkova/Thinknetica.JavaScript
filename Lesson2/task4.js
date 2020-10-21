@@ -5,13 +5,7 @@
 const numbers = [-20, -10, 0, 10, 20, 30];
 
 const sortCallback = function(a, b) {
-  if(a < b) {
-    return 1;    
-  } else if(a > b) {
-    return -1;
-  } else {
-    return 0;
-  };
+  return b - a;
 }
 
 function sortDesc(array) {
