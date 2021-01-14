@@ -27,12 +27,11 @@ const TicketLand = function() {
       console.log(" Input is invalid ");
       return false;
     };
-    if(checkEventsCache(str) == true) {
+    if(checkEventsCache(str)) {
       console.log('Event already exists');
       return;
-    } else {      
-      events.push({event: str.trim(), price: sum});      
-    };
+    }      
+    events.push({event: str.trim(), price: sum});      
   };
   
   this.buyTicket = function(str) {

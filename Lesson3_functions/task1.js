@@ -13,13 +13,10 @@
 
 function MoneyBox() {
   let coinsAmount = 0;
-   function calculateCoins(val) {
-     coinsAmount += val;
-   }
   
   return {
     addCoin: function() {
-      calculateCoins(1)
+      coinsAmount++;
     },
     getAmount: function() {
       console.log(coinsAmount);
